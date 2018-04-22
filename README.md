@@ -55,7 +55,7 @@ The synthesis network is trained in a progessive way. We first train a model wit
 (3) run "synthesis_512_1024.py" with setting "training_phase = True". The result is saved in "../trainedmodels/synthesis/".
 
 ## Video
-https://youtu.be/0fhUJT21-bs
+https://youtu.be/l7gFt99mpA4
 
 ## All Results
 Results for all the datasets is stored in folder "../all_results".
