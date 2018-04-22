@@ -4,7 +4,7 @@ Semi-parametric Image Synthesis
 
 This is a Tensorflow implementation of cascaded refinement networks to synthesize photographic images from semantic layouts.
 
-<img src="./overallpipeline.png"/>
+<img src="./overallpipeline.pdf"/>
 
 ## Setup
 
