@@ -61,7 +61,7 @@ Results for all the datasets is stored in folder "../all_results".
 ## Citation
 If you use our code for research, please cite our paper:
 
-Xiaojuan Qi, Qifeng Chen, Jiaya Jia Vladlen Koltun. Photographic Image Synthesis with Cascaded Refinement Networks. In ICCV 2017.
+Xiaojuan Qi, Qifeng Chen, Jiaya Jia Vladlen Koltun. Semi-parametric Image Synthesis. In CVPR 2018.
 
 
 ## Todo List
