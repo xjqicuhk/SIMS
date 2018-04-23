@@ -34,7 +34,7 @@ Use resolution "512 x 1024" as a running example.
 5. Canvas Production:
  (1) cd "../matlab_code"; 
  (2) run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on and the generated data is stored in "../testdata/synthesis".
-6. Image synthesis
+6. Image synthesis:
 (1) cd "../python_code";
 (2) run "synthesis_512_1024.py" to generate the final results and results are saved in folder "../result/synthesis".
 
