@@ -1,6 +1,4 @@
-# SIMS
-Semi-parametric Image Synthesis
-# Photographic Image Synthesis with Cascaded Refinement Networks
+# Semi-parametric Image Synthesis
 
 This is a Tensorflow implementation of cascaded refinement networks to synthesize photographic images from semantic layouts.
 
