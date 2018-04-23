@@ -20,18 +20,23 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 
 ### Testing pipelines
 Use resolution "512 x 1024" as a running example.
-1. cd "matlab_code".
- Run "test_generate_transform.m" to generate testing data for the transformation network. The generated data is stored in  "../testdata/transform/".
-2. cd "../python_code".
- Run "transformation.py" to generate the transformed results. The results are saved in folder "../result/transform".
-3. cd "../matlab_code".
-  Run "test_generate_order.m" to generate testing data for the ordering network. The generated data is stored in "../testdata/order/".
-4. cd "../python_code".
-   Run "order.py", the order prediction is stored in folder "../result/order/data/".
-5. cd "../matlab_code".
- Run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on. The generated data is stored in "../testdata/synthesis".
-6. cd "../python_code".
- Run "synthesis_512_1024.py" to generate the final results. The result is saved in folder "../result/synthesis".
+1. Data preparation:
+ (1) cd "matlab_code"; 
+ (2) run "test_generate_transform.m" to generate testing data for the transformation network. The generated data is stored in  "../testdata/transform/";
+2. Transformation:
+(1) cd "../python_code";
+(2) run "transformation.py" to generate the transformed results. The results are saved in folder "../result/transform".
+3. Ordering:
+ (1) cd "../matlab_code";
+ (2) run "test_generate_order.m" to generate testing data for the ordering network. The generated data is stored in "../testdata/order/";
+ (3) cd "../python_code";
+ (4) run "order.py", the order prediction is stored in folder "../result/order/data/".
+5. Canvas Production:
+ (1) cd "../matlab_code"; 
+ (2) run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on. The generated data is stored in "../testdata/synthesis".
+6. Image synthesis
+(1) cd "../python_code";
+(2) run "synthesis_512_1024.py" to generate the final results. The result is saved in folder "../result/synthesis".
 
 You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if you do not want to use spatial transformer. We do not observe significant improvement with spatial transformation on cityscapes dataset but it is required on "NYU" datasets since "NYU" has large variation of viewpoints.
 
