@@ -21,17 +21,17 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 ### Testing pipelines
 Use resolution "512 x 1024" as a running example.
 1. cd "matlab_code".
-2. run "test_generate_transform.m" to generate testing data for the transformation network. The generated data is stored in  "../testdata/transform/"
-3. cd "../python_code"
-4. run "transformation.py" to generate the transformed results. The results are saved in folder "../result/transform"
+ run "test_generate_transform.m" to generate testing data for the transformation network. The generated data is stored in  "../testdata/transform/"
+2. cd "../python_code"
+ run "transformation.py" to generate the transformed results. The results are saved in folder "../result/transform"
+3. cd "../matlab_code"
+  run "test_generate_order.m" to generate testing data for the ordering network. The generated data is stored in "../testdata/order/".
+4. cd "../python_code"
+   run "order.py", the order prediction is stored in folder "../result/order/data/".
 5. cd "../matlab_code"
-6.  run "test_generate_order.m" to generate testing data for the ordering network. The generated data is stored in "../testdata/order/".
-7. cd "../python_code"
-8. run "order.py", the order prediction is stored in folder "../result/order/data/".
-9. cd "../matlab_code"
-10. run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on. The generated data is stored in "../testdata/synthesis".
-11. cd "../python_code"
-12. run "synthesis_512_1024.py" to generate the final results. The result is saved in folder "../result/synthesis".
+ run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on. The generated data is stored in "../testdata/synthesis".
+6. cd "../python_code"
+ run "synthesis_512_1024.py" to generate the final results. The result is saved in folder "../result/synthesis".
 
 One should notice one can skip steps "3", "4" and "5" and modify the "test_generate_canvas.m" according if you do not want to use spatial transformer. We do not observe significant improvement with spatial transformation on cityscapes dataset but it is reuired on "NYU" datasets since "NYU" has large variation of viewpoints.
 
