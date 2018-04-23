@@ -31,7 +31,7 @@ Use resolution "512 x 1024" as a running example.
  (2) run "test_generate_order.m" to generate testing data for the ordering network and the generated data is stored in "../testdata/order/";
  (3) cd "../python_code";
  (4) run "order.py" and order prediction results are saved in folder "../result/order/data/".
-5. Canvas Production:
+5. Canvas Generation:
  (1) cd "../matlab_code"; 
  (2) run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on and the generated data is stored in "../testdata/synthesis".
 6. Image synthesis:
