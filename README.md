@@ -1,6 +1,6 @@
 # Semi-parametric Image Synthesis
 
-This is a Tensorflow implementation of cascaded refinement networks to synthesize photographic images from semantic layouts.
+This is a Tensorflow implementation of Semi-parametric Image Synthesis.
 
 <img src="./overallpipeline.png"/>
 
@@ -13,45 +13,45 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 
 ### Quick Start (Setup)
 1. Clone this repository.
-2. cd into the cloned folder
-3. Download the pretrained models from "https:/trainedmodels". It takes several minutes to download all the models.
-4. Download the test data from "https:/testdata". It requires approximate 11G memory.
-5. Download the training data from "https:/traindata". It requires approximate 60G memory
+2. Enter the cloned folder.
+3. Download the pretrained models from "https://trainedmodels". It takes several minutes to download all the models.
+4. Download the test data from "https://testdata". It requires approximate 11G memory.
+5. Download the training data from "https://traindata". It requires approximate 60G memory
 
 ### Testing pipelines
 Use resolution "512 x 1024" as a running example.
-1. Data preparation:
+1. Data preparation
  (1) cd "matlab_code"; 
  (2) run "test_generate_transform.m" to generate testing data for the transformation network and the generated data is stored in  "../testdata/transform/";
-2. Transformation:
+2. Transformation
 (1) cd "../python_code";
 (2) run "transformation.py" to generate the transformed results and results are saved in folder "../result/transform".
-3. Ordering:
+3. Ordering
  (1) cd "../matlab_code";
  (2) run "test_generate_order.m" to generate testing data for the ordering network and the generated data is stored in "../testdata/order/";
  (3) cd "../python_code";
  (4) run "order.py" and order prediction results are saved in folder "../result/order/data/".
-5. Canvas generation:
+5. Canvas generation
  (1) cd "../matlab_code"; 
  (2) run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on and the generated data is stored in "../testdata/synthesis".
-6. Image synthesis:
+6. Image synthesis
 (1) cd "../python_code";
-(2) run "synthesis_512_1024.py" to generate the final results and results are saved in folder "../result/synthesis".
+(2) run "synthesis_512_1024.py" to generate the final results and the results are saved in folder "../result/synthesis".
 
-You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if you do not want to use spatial transformer. We do not observe significant improvement with spatial transformation on cityscapes dataset but it is required on "NYU" datasets since "NYU" has large variation of viewpoints.
+You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if you do not want to use the spatial transformer. We do not observe significant improvement with spatial transformation on the Cityscapes dataset but it is essential on "NYU" datasets since "NYU" has large variation of viewpoints.
 
 ### Training
-1. Transformation network:
+1. Transformation network
 (1) cd "matlab_code";
 (2) run "test_generate_transform.m" to generate training data for the transformation network, training data is stored in folder "../traindata/transform/";
 (3) cd "../python-code";
 (4) run "transformation.py" with setting "training_phase = True".
-2. Ordering network:
+2. Ordering network
 (1) cd "matlab_code";
 (2) run "train_generate_order.m" to generate training data for the ordering network, training data is stored in folder "../traindata/order/";
 (3) cd "../python_code";
 (4) run "ordering.py" with setting "training_phase = True". The model is saved in "../trainedmodels/order/".
-3. Syntheiss network:
+3. Synthesis network
 The synthesis network is trained in a cascade way. We first train a model with resolution "256 x 512", and use it to initialize the model for resolution "512 x 1024", and then "1024 x 2048". The script for different resolutions is in file "synthesis_256_512.py", "synthesis_512_1024.py" and "synthesis_1024_2048.py" respectively.
 (1) cd "../matlab_code/";
 (2) run "train_generate_synthesis.m", training data is saved in folder "../traindata/synthesis/";
@@ -66,11 +66,11 @@ Results for all the datasets is stored in folder "../all_results".
 ## Citation
 If you use our code for research, please cite our paper:
 
-Xiaojuan Qi, Qifeng Chen, Jiaya Jia Vladlen Koltun. Semi-parametric Image Synthesis. In CVPR 2018.
+Xiaojuan Qi, Qifeng Chen, Jiaya Jia, and Vladlen Koltun. Semi-parametric Image Synthesis. In CVPR 2018.
 
 
-## Todo List
-1.  Replace "transformation.py" with "appearance flow" [Zhou et al. 2016].
+## Future Directions
+1. Replace "transformation.py" with "appearance flow" [Zhou et al. 2016].
 2. Add "contextual loss" [Mechrez et al. 2018] in the synthesis network to further improve the results.
 
 ## Question
