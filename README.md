@@ -1,6 +1,6 @@
-# Semi-parametric Image Synthesis
+# Semi-parametric Image Synthesis (SIMS)
 
-This is a Tensorflow implementation of Semi-parametric Image Synthesis.
+This is a Tensorflow implementation of Semi-parametric Image Synthesis (SIMS).
 
 <img src="./overallpipeline.png"/>
 
@@ -11,14 +11,14 @@ Required python libraries: Tensorflow (>=1.2) + Scipy + Numpy + Pillow + OpenCV.
 
 Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and CuDNN (>=5.0). CPU mode should also work with minor changes.
 
-### Quick Start (Setup)
+### Quick Start (setup)
 1. Clone this repository.
 2. Enter the cloned folder.
-3. Download the pretrained models from "https://trainedmodels". It takes several minutes to download all the models.
-4. Download the test data from "https://testdata". It requires approximate 11G memory.
-5. Download the training data from "https://traindata". It requires approximate 60G memory
+3. Download the pretrained models from "https://drive.google.com/open?id=1MgEHYbMM7DAwoFpaH0Z5IRglFzTT6Fd5". It takes several minutes to download all the models.
+4. Download the test data from "https://drive.google.com/open?id=1w7Nk3U8lKGlCDch_tn_hu9bpWZYLdhbN". It is approximately 11Gb in size.
+5. Download the training data from "https://drive.google.com/open?id=1UoZ2_TnA-IrRLtgvvznUO3VZbOwXwZI-". It is approximately 60Gb in size
 
-### Testing pipelines
+### Inference
 Use resolution "512 x 1024" as a running example.
 1. Data preparation
  (1) cd "matlab_code"; 
@@ -52,7 +52,7 @@ You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if yo
 (3) cd "../python_code";
 (4) run "ordering.py" with setting "training_phase = True". The model is saved in "../trainedmodels/order/".
 3. Synthesis network
-The synthesis network is trained in a cascade way. We first train a model with resolution "256 x 512", and use it to initialize the model for resolution "512 x 1024", and then "1024 x 2048". The script for different resolutions is in file "synthesis_256_512.py", "synthesis_512_1024.py" and "synthesis_1024_2048.py" respectively.
+The synthesis network is trained in a coarse-to-fine fashion. We first train a model with resolution "256 x 512", and use it to initialize the model for resolution "512 x 1024", and then "1024 x 2048". The script for different resolutions is in file "synthesis_256_512.py", "synthesis_512_1024.py" and "synthesis_1024_2048.py" respectively.
 (1) cd "../matlab_code/";
 (2) run "train_generate_synthesis.m", training data is saved in folder "../traindata/synthesis/";
 (3) run "synthesis_512_1024.py" with setting "training_phase = True". The result is saved in "../trainedmodels/synthesis/".
@@ -61,7 +61,7 @@ The synthesis network is trained in a cascade way. We first train a model with r
 https://youtu.be/l7gFt99mpA4
 
 ## All Results
-Results for all the datasets is stored in folder "../all_results".
+Results for all the datasets are stored at "https://drive.google.com/open?id=1UFaRl_3EGK0hSBlmB6AJVeZZ_r-SHQLm".
 
 ## Citation
 If you use our code for research, please cite our paper:
