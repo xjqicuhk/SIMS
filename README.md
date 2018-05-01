@@ -14,9 +14,10 @@ Tested in Ubuntu + Intel i7 CPU + Nvidia Titan X (Pascal) with Cuda (>=8.0) and 
 ### Quick Start (setup)
 1. Clone this repository.
 2. Enter the cloned folder.
-3. Download the pretrained models from "https://drive.google.com/open?id=1MgEHYbMM7DAwoFpaH0Z5IRglFzTT6Fd5". It takes several minutes to download all the models.
-4. Download the test data from "https://drive.google.com/open?id=1w7Nk3U8lKGlCDch_tn_hu9bpWZYLdhbN". It is approximately 11Gb in size.
-5. Download the training data from "https://drive.google.com/open?id=1UoZ2_TnA-IrRLtgvvznUO3VZbOwXwZI-". It is approximately 60Gb in size
+3. Download vgg19 network from "https://drive.google.com/open?id=0B_B_FOgPxgFLRjdEdE9NNTlzUWc" and  run  "mv ./imagenet-vgg-verydeep-19.mat ./python_code/Models"
+4. Download the pretrained models (trainedmodels.zip) from "https://drive.google.com/open?id=1MgEHYbMM7DAwoFpaH0Z5IRglFzTT6Fd5". It takes several minutes to download all the models.
+5. Download the test data (testdata.zip) from "https://drive.google.com/open?id=1w7Nk3U8lKGlCDch_tn_hu9bpWZYLdhbN". It is approximately 11Gb in size. 
+6. Download the training data (traindata.zip) from "https://drive.google.com/open?id=1UoZ2_TnA-IrRLtgvvznUO3VZbOwXwZI-". It is approximately 60Gb in size
 
 ### Inference
 Use resolution "512 x 1024" as a running example.
