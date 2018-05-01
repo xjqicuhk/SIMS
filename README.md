@@ -61,7 +61,7 @@ The synthesis network is trained in a coarse-to-fine fashion. We first train a m
 (3) run "synthesis_512_1024.py" with setting "training_phase = True". The result is saved in "../trainedmodels/synthesis/".
 
 ## Video
-https://youtu.be/l7gFt99mpA4
+https://youtu.be/U4Q98lenGLQ
 
 ## All Results
 Results for all the datasets are stored at "https://drive.google.com/open?id=1UFaRl_3EGK0hSBlmB6AJVeZZ_r-SHQLm".
@@ -70,11 +70,6 @@ Results for all the datasets are stored at "https://drive.google.com/open?id=1UF
 If you use our code for research, please cite our paper:
 
 Xiaojuan Qi, Qifeng Chen, Jiaya Jia, and Vladlen Koltun. Semi-parametric Image Synthesis. In CVPR 2018.
-
-
-## Future Directions
-1. Replace "transformation.py" with "appearance flow" [Zhou et al. 2016].
-2. Add "contextual loss" [Mechrez et al. 2018] in the synthesis network to further improve the results.
 
 ## Question
 If you have any question or request about the code and data, please email me at qxj0125@gmail.com . If you need more information for other datasets plesase send email. 
