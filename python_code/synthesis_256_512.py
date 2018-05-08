@@ -355,7 +355,7 @@ else:
         os.makedirs(save_result_path)
     for ind in range(100001,100501):
         print(ind)
-        semantic=helper.get_semantic_map(label_folder+"/%08d.png"%ind)
+        
         dic = scipy.io.loadmat(mat_path + "%08d.mat" %ind)
         proposal_tmp = np.expand_dims(dic['proposal'], axis=0)
         tmp_z = np.sum(proposal_tmp, axis=-1)
