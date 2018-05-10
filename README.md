@@ -45,18 +45,20 @@ You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if yo
 
 ### Training
 1. Transformation network
-[If you want to diectly use our provided data, please do the following: (1) cd "matlab_code"; (2) run "resize_transform.m"; (3) cd "../python_code"; (4) run "transformation.py"].
+[If you want to diectly use our provided data, please do the following: (1) cd "matlab_code"; (2) run "resize_transform.m"; (3) cd "../python_code"; (4) run "transformation.py" with setting "training_phase = True"].
 (1) cd "matlab_code";
 (2) run "train_generate_transform.m" to generate training data for the transformation network, training data is stored in folder "../traindata/transform/";
 (3) run "resize_transform.m"
 (4) cd "../python-code";
 (5) run "transformation.py" with setting "training_phase = True".
 2. Ordering network
+[If you want to diectly use our provided data, please do the following: (1) cd "../python_code"; (4) run "ordering.py" with setting "training_phase = True"].
 (1) cd "matlab_code";
 (2) run "train_generate_order.m" to generate training data for the ordering network, training data is stored in folder "../traindata/order/";
 (3) cd "../python_code";
 (4) run "ordering.py" with setting "training_phase = True". The model is saved in "../trainedmodels/order/".
 3. Synthesis network
+[If you want to diectly use our provided data, please do the following: (1) cd "../python_code"; (4) run "synthesis_512_1024.py" with setting "training_phase = True"]
 The synthesis network is trained in a coarse-to-fine fashion. We first train a model with resolution "256 x 512", and use it to initialize the model for resolution "512 x 1024", and then "1024 x 2048". The script for different resolutions is in file "synthesis_256_512.py", "synthesis_512_1024.py" and "synthesis_1024_2048.py" respectively.
 (1) cd "../matlab_code/";
 (2) run "train_generate_synthesis.m", training data is saved in folder "../traindata/synthesis/";
