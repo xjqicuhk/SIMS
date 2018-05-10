@@ -45,6 +45,7 @@ You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if yo
 
 ### Training
 1. Transformation network
+[If you want to diectly use our provided data, please do the following: (1) cd "matlab_code"; (2) run "resize_transform.m"; (3) cd "../python_code"; (4) run "transformation.py"].
 (1) cd "matlab_code";
 (2) run "train_generate_transform.m" to generate training data for the transformation network, training data is stored in folder "../traindata/transform/";
 (3) run "resize_transform.m"
