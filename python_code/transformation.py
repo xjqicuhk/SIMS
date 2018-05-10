@@ -6,11 +6,11 @@ from tensorflow.contrib.layers.python.layers import initializers
 from spatial_transformer import transformer
 import numpy as np
 
-training_phase = False
+training_phase = True
 if(training_phase):
     rgb_path = "../traindata/RGB512Full/"
     mat_path = "../traindata/transform/transform_512/"
-    label_path = "../traindata/label_refine/"
+    label_path = "../traindata/label_refine_512/"
     save_model_path = "../trainedmodels/transform"
     num_folder = 2
 else:

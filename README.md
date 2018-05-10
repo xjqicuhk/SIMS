@@ -46,9 +46,10 @@ You can skip steps "2" and modify the "test_generate_canvas.m" accordingly if yo
 ### Training
 1. Transformation network
 (1) cd "matlab_code";
-(2) run "test_generate_transform.m" to generate training data for the transformation network, training data is stored in folder "../traindata/transform/";
-(3) cd "../python-code";
-(4) run "transformation.py" with setting "training_phase = True".
+(2) run "train_generate_transform.m" to generate training data for the transformation network, training data is stored in folder "../traindata/transform/";
+(3) run "resize_transform.m"
+(4) cd "../python-code";
+(5) run "transformation.py" with setting "training_phase = True".
 2. Ordering network
 (1) cd "matlab_code";
 (2) run "train_generate_order.m" to generate training data for the ordering network, training data is stored in folder "../traindata/order/";
