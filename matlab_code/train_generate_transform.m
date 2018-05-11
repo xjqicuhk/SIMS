@@ -1,3 +1,4 @@
+addpath('func_save')
 img_path = '../traindata/RGB512Full/';
 label_path = '../traindata/label_refine/';
 list = dir([img_path '*.png']);
