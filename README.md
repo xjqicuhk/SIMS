@@ -26,7 +26,7 @@ Use resolution "512 x 1024" as a running example.
 0. Try on your own semantic maks
 (1) cd "matlab_code";
 (2) run "test_connect_component_mask.m" (replace label_path) and the generated mask will stored in "../testdata/original_mask" (Disclaimer: you should modifiy the code according based on your own data format);
-(3) run "search_segments.m"  and the generated result will be saved in folder "searched_top10_segments" .
+(3) run "search_segments.m"  and the generated result will be saved in folder "searched_top10_segments" (currently search based on  context iou will be added soon) .
 1. Data preparation
  (1) cd "matlab_code"; 
  (2) run "test_generate_transform.m" to generate testing data for the transformation network and the generated data is stored in  "../testdata/transform/";
