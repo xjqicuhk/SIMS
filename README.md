@@ -41,6 +41,7 @@ Use resolution "512 x 1024" as a running example.
 5. Canvas generation
  (1) cd "../matlab_code"; 
  (2) run "test_generate_canvas.m" to generate the canvas for the synthesis network to work on and the generated data is stored in "../testdata/synthesis".
+ We also modified the original semantic mask according to the shape of the segment we have serached. Our method cannot guarantee that the synthesized images exactly match the original semantic layout especially for fine semantic layout.
 6. Image synthesis
 (1) cd "../python_code";
 (2) run "synthesis_512_1024.py" to generate the final results and the results are saved in folder "../result/synthesis".
