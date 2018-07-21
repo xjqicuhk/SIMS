@@ -79,7 +79,7 @@ for i = 1:size(list_test,2)
       proposal_iou(:,j) = record_iou;
       
     end
-    save_warper5([save_response_path_final '/' list_test{1,i}(1:end-4) '.mat'],proposal,proposal_iou,[],proposal_pole_mask,response_index);
+    save([save_response_path_final '/' list_test{1,i}(1:end-4) '.mat'],'proposal','proposal_iou','proposal_pole_mask','response_index');
    end
     
   end
